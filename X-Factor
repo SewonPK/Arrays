@@ -1,8 +1,8 @@
 import random
-Artists = ["Shishishishi","Charlie Puth",2,3,4,5,6,7,8,9]
+Artists = ["Shishishishi","Charlie Puth","Shawn Mendes","",4,5,6,7,8,9]
 Songs = [[0,1,2,3,4,5,6,7,8,9]]*10
 Songs[0] = ["Orange Point","Melancholy","Hyena","Volcano","Crisis","Random","Moonlight","Controversy","Eien Hanadashi",""]
-Songs[1] = ["s","d","da","","","","SD","dsdf","DA",""]
+Songs[1] = ["Light Switch","Attention","The Way I Am","We Don't Talk Anymore","","","SD","dsdf","DA",""]
 Songs[2] = ["s","d","da","","","","SD","dsdf","SDA",""]
 Songs[3] = ["s","d","da","","","","SD","dsdf","SDA",""]
 Songs[4] = ["s","d","da","","","","SD","dsdf","SDA",""]
@@ -14,12 +14,14 @@ Songs[9] = ["s","d","da","","","","SD","dsdf","SDA",""]
 SongsPlayed = 0
 ArtistShuffle = [""]*20
 Check = [""]*2
+SongShuffle = [""]*20
+CurrentArtist = ""
 
-for i in range (0,19):
+for i in range (0,20):
     ArtistShuffle[i] = random.choice(Artists)
 while ArtistShuffle[1] == ArtistShuffle[0]:
     ArtistShuffle[1] = random.choice(Artists)
-for i in range (2,19):
+for i in range (2,20):
     Check[0] = ArtistShuffle[i-2]
     Check[1] = ArtistShuffle[i-1]
     while ArtistShuffle[i] in Check:
@@ -27,3 +29,7 @@ for i in range (2,19):
     print(Check)
 
 print(ArtistShuffle)
+
+for i in range (0,20):
+    CurrentArtist = 
+    
